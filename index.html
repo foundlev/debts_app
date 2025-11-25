@@ -19,7 +19,7 @@
     <!-- Варианты: default / black / black-translucent. Для Dynamic Island чаще лучше translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <meta name="apple-mobile-web-app-title" content="Сила × 90">
+    <meta name="apple-mobile-web-app-title" content="Debts App">
 
     <!-- iOS иконки -->
     <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" sizes="180x180">
@@ -1086,15 +1086,15 @@
                     const checkbox = paymentItem.querySelector('.payment-checkbox');
                     const editButton = paymentItem.querySelector('.edit-button');
 
-                    paymentItem.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        togglePaymentChecked(item.id);
-                    });
-
-                    // checkbox.addEventListener('click', (e) => {
+                    // paymentItem.addEventListener('click', (e) => {
                     //     e.stopPropagation();
                     //     togglePaymentChecked(item.id);
                     // });
+
+                    checkbox.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        togglePaymentChecked(item.id);
+                    });
 
                     editButton.addEventListener('click', (e) => {
                         e.stopPropagation();
