@@ -542,8 +542,9 @@
     </div>
 
     <script>
-        // Текущая дата - 10 декабря
-        const today = new Date('2024-12-10');
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // чтобы дниDiff считались ровно по датам
+
         const endDate = new Date(today);
         endDate.setDate(endDate.getDate() + 60);
 
